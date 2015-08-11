@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    >
+    <ScrollView
+        android:id="@+id/mScrollView_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/mScrollChildView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/firstFrag_myphoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "myphoto"/>
+            <ImageView
+                android:id="@+id/myPhotoView_01"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_config_prefDialogWidth"
+                android:background="#87CEFA"/>
+            <ImageView
+                android:id="@+id/myPhotoView_02"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_config_prefDialogWidth"
+                android:layout_marginTop="10dp"
+                android:background="#87CEFA"/>
+            <ImageView
+                android:id="@+id/myPhotoView_03"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/abc_config_prefDialogWidth"
+                android:layout_marginTop="10dp"
+                android:background="#87CEFA"/>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>

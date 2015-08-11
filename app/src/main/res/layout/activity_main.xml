@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp" android:background="#ffffff"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp" tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_menuLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ff393c46"
+            android:gravity="left"
+            android:orientation="vertical"
+            android:textColor="#ff000000">
+
+            <include
+                android:id="@+id/ic_leftslidemenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/leftslidemenu"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ll_mainlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F0FFFF"
+            android:gravity="left"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/abc_action_bar_stacked_max_height"
+                    android:background="#87CEFA"/>
+                <Button
+                    android:id="@+id/bt_left"
+                    android:layout_width="70dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="0dp"
+                    android:background="@drawable/smenu_img4" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/titleText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        android:text="ScenePle"
+
+                        android:textSize="30dp"
+                        android:textColor="#ffffff"/>
+
+                    <!-- view pager interface-->
+                   <LinearLayout
+                       android:layout_width="fill_parent"
+                       android:layout_height="fill_parent"
+                       android:orientation="vertical"
+                       android:weightSum="90"
+                       android:layout_below="@+id/titleText"
+                       >
+                       <android.support.v4.view.ViewPager
+                           android:id="@+id/vpPager"
+                           android:layout_width="fill_parent"
+                           android:layout_height="0dp"
+                           android:layout_weight="89"
+                           >
+                           <android.support.v4.view.PagerTabStrip
+                               android:id="@+id/pager_head"
+                               android:layout_width="match_parent"
+                               android:layout_height="wrap_content"
+                               android:layout_gravity="top"
+                               android:paddingBottom="4dp"
+                               android:paddingTop="4dp"
+
+                               >
+                           </android.support.v4.view.PagerTabStrip>
+                       </android.support.v4.view.ViewPager>
+
+                   </LinearLayout>
+
+                    
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_empty"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/transparent">
+
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>
